@@ -37,3 +37,11 @@ const data = {
   title: 'Custom Post',
   body: 'This is a custom post'
 };
+
+http.delete('https://jsonplaceholder.typicode.com/posts/1', function(err, response) {
+  if(err) {
+    console.log(err);
+  } else {
+    console.log(response);
+  }
+});
