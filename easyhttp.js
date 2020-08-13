@@ -17,3 +17,10 @@ easyHTTP.prototype.get = function(url, callback) {
   }
   this.http.send();
 }
+
+// Make an HTTP POST Request
+easyHTTP.prototype.post = function(url, data, callback) {
+    this.http.open('POST', url, true);
+    
+  this.http.send(JSON.stringify(data));
+}
